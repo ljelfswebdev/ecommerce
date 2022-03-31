@@ -12,8 +12,8 @@ function NavLink({to, children}) {
 
 function MobileNav({open, setOpen}) {
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
-            <div className="flex items-center justify-left p-2 filter drop-shadow-md bg-white h-20"> {/*logo container*/}
+        <div className={`absolute top-0 left-0 h-screen w-screen bg-green transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
+            <div className="flex items-center justify-left p-2 filter drop-shadow-md bg-green2 h-20"> {/*logo container*/}
                 <Link href="/">
                 <a><img src="./favicon.ico" alt="LJ"/></a>
                 </Link>     
@@ -42,7 +42,7 @@ function MobileNav({open, setOpen}) {
 export default function Navbar() {
     const [open, setOpen] = useState(false)
         return (
-            <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
+            <nav className="flex filter drop-shadow-md bg-green px-4 py-4 h-20 items-center">
                 <MobileNav open={open} setOpen={setOpen}/>
                 <div className="w-3/12 flex items-center">
                 <Link href="/">
@@ -50,7 +50,7 @@ export default function Navbar() {
                 </Link> 
                 </div>
                 <div className="w-9/12 flex justify-end items-center">
-    <SearchBar />
+            <SearchBar />
                     <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
                         setOpen(!open)
                     }}>

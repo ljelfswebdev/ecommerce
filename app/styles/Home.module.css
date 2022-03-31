@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  max-height: fit-content;
 }
 
 .main {
@@ -43,6 +44,7 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .title,

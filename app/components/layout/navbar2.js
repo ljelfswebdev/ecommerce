@@ -11,7 +11,7 @@ function NavLink({to, children}) {
 
 export default function Navbar2() {
         return (
-            <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-10 items-center hidden md:flex">
+            <nav className="flex filter drop-shadow-md bg-green2 px-4 py-4 h-10 items-center hidden md:flex">
                 <div className="w-9/12 flex justify-start items-center">
     
                     <div className="hidden md:flex">
