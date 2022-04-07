@@ -31,8 +31,8 @@ export default function Dinosaur({ dinosaur }) {
     </Head>
     <div className='flex sm:flex-wrap mb-10 mt-10 justify-between '>
       <div className='dino ml-10'>
-        <div key={dinosaur.id} className="max-w-md rounded overflow-hidden shadow-lg mb-3 hover:bg-green text-center">
-          <img className="w-full" src={dinosaur.imageUrl} alt={dinosaur.name}/>
+        <div key={dinosaur.id} className="max-w-md rounded overflow-hidden shadow-lg mb-3 text-center">
+          <img className="w-full" src={`../${dinosaur.imageUrl}`} alt={dinosaur.name}/>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{dinosaur.name}</div>
             <div className="text-l mb-2">-{dinosaur.meaningOfName}</div>
