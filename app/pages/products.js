@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
+
 const Products = ({dinosaurs}) => {
     return ( 
     <div className={styles.container}>
@@ -19,7 +20,7 @@ const Products = ({dinosaurs}) => {
           {
             dinosaurs.map((dino) => (
 
-              <div key={dino.id} className="max-w-sm rounded overflow-hidden shadow-lg mb-3 hover:bg-green text-center">
+              <div key={dino.id} className="max-w-md rounded overflow-hidden shadow-lg mb-3 hover:bg-green text-center">
                 <img className="w-full" src={dino.imageUrl} alt={dino.name}/>
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{dino.name}</div>
