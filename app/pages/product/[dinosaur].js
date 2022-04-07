@@ -29,8 +29,9 @@ export default function Dinosaur({ dinosaur }) {
       <meta name="description" content="eCommerce site where you can buy shares in dinosaurs" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div className='flex sm:flex-wrap mb-10 mt-10 justify-between '>
-      <div className='dino ml-10'>
+
+    <div className='flex flex-wrap mb-10 mt-10 justify-center space-x-7'>
+      <div className='dino'>
         <div key={dinosaur.id} className="max-w-md rounded overflow-hidden shadow-lg mb-3 text-center">
           <img className="w-full" src={`../${dinosaur.imageUrl}`} alt={dinosaur.name}/>
           <div className="px-6 py-4">
@@ -52,7 +53,7 @@ export default function Dinosaur({ dinosaur }) {
             </div>     
         </div>
       </div>
-      <div className='cart mr-10'>
+      <div className='cart'>
       <div className="max-w-md rounded overflow-hidden shadow-lg mb-3 text-center">    
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Buy Now</div>
