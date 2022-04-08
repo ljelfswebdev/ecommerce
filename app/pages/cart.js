@@ -3,13 +3,10 @@ import styles from '../styles/Home.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity, removeFromCart} from '../redux/cart.slice';
 import Link from 'next/link'
+import { useEffect } from 'react';
 
 const CartPage = () => {
-
-    // Extracting cart state from redux store 
     const cart = useSelector((state) => state.cart);
-
-    // Reference to the dispatch function from redux store
     const dispatch = useDispatch();
 
     // const getTotalPrice = () => {
@@ -28,7 +25,7 @@ const CartPage = () => {
         </Head>
     {cart.length === 0 ? (
       <div className="rounded overflow-hidden shadow-lg mb-3 mt-4 text-center">
-        <h1>Your Cart is Empty!</h1>
+        <h1 className="font-bold text-xl mb-5">Your Cart is Empty!</h1>
         <div>
           <Link href="/products" >
             <button className="bg-blue hover:bg-white hover:text-blue text-white font-bold py-2 px-4 mb-2 rounded-full">
@@ -73,7 +70,6 @@ const CartPage = () => {
         ))}
         <div className="max-w-md rounded overflow-hidden shadow-lg mb-3 py-2 px-4 h-25 text-center">
           <h1 className="font-bold text-xl mb-5">Proceed to checkout</h1>
-          <h1 className="font-bold text-xl mb-10">Total to pay</h1>
 
           <div className='grid place-items-center'>
         <Link href="/checkout" >
