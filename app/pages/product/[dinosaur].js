@@ -77,7 +77,7 @@ export default function Dinosaur({ dinosaur }) {
                     ease-in-out
                     m-0
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-                      <option defaultValue={0}>Amount of Shares ▼</option>
+                      <option>Amount of Shares ▼ </option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
@@ -94,8 +94,10 @@ export default function Dinosaur({ dinosaur }) {
               <div className='mb-3'>
                 Total Cost = £{dinosaur.pricePerShare * value}
               </div>
-              <Link href="/cart" >
-                <button className="bg-blue hover:bg-white hover:text-blue text-white font-bold py-2 px-4 mb-2 rounded-full">
+              <Link href="/continue" >
+                <button 
+                  disabled={!value}
+                  className="bg-blue hover:bg-white hover:text-blue text-white font-bold py-2 px-4 mb-2 rounded-full">
                   Add to Cart
                 </button>
               </Link>         
