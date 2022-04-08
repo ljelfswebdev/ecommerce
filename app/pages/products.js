@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import dinosaurs from './api/data/dinosaurs.json'
 
 
-const Products = ({dinosaurs}) => {
+const Products = () => {
     return ( 
     <div className={styles.container}>
         <Head>
@@ -46,13 +47,4 @@ const Products = ({dinosaurs}) => {
      );
 }
  
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/products')
-  const dinosaurs = await res.json()
-  return {
-    props: {
-      dinosaurs,
-    },
-  }
-}
 export default Products;
