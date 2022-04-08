@@ -61,11 +61,12 @@ export default function Dinosaur({ dinosaur }) {
                 £{dinosaur.pricePerShare} per Share
               </h1>
               <div className="flex justify-center">
-                <div className="mb-3 xl:w-96">
+                <div className="mb-3 xl:w-60">
                   <select value={value} onChange={(e) => {setValue(e.target.value)}} className="form-select appearance-none
                     block
                     w-full
                     px-3
+                    text-center
                     py-1.5
                     text-base
                     font-normal

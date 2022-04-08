@@ -53,5 +53,27 @@
         "info": "Velociraptors were actually feathered animals. They grew up to 100 pounds, about the size of a wolf. And they likely hunted solo—using their claws to clutch rather than slash prey—when they roamed central and eastern Asia between about 74 million and 70 million years ago, during the late Cretaceous period.",
         "imageUrl":"./images/dinosaurs/velociraptor.jpeg",
         "pricePerShare" : "172"
+    },
+    {
+        "id": 6,
+        "name": "Triceratops",
+        "meaningOfName": "three-horned face",
+        "diet": "herbivorous",
+        "length": "9m",
+        "period": "Late Cretaceous",
+        "info": "Triceratops, (genus Triceratops), large quadrupedal plant-eating ceratopsian dinosaur that had a frill of bone at the back of its skull and three prominent horns.",
+        "imageUrl":"./images/dinosaurs/triceratops.jpg",
+        "pricePerShare" : "106"
+    },
+    {
+        "id": 7,
+        "name": "Diplodocus",
+        "meaningOfName": "beam",
+        "diet": "herbivorous",
+        "length": "27m",
+        "period": "Late Jurassic",
+        "info": "Diplodocus had a small, horselike head and a very small brain. It had peg-shaped teeth in the front of its mouth. Its back legs were slightly longer than its front legs, making the animal slope downward from its hips to its head. Diplodocus had elephant like feet with three claws on each back foot.",
+        "imageUrl":"./images/dinosaurs/diplodocus.jpg",
+        "pricePerShare" : "98"
     }
 ]
