@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cart.slice';
 
 export async function getStaticPaths() {
     const paths = dinosaurs.map(dinosaur => ({
@@ -19,7 +21,7 @@ export async function getStaticProps({ params }) {
 
 export default function Dinosaur({ dinosaur }) {
   const [value, setValue] = useState("");
-
+  const dispatch = useDispatch();
 
   return (
 
@@ -30,7 +32,7 @@ export default function Dinosaur({ dinosaur }) {
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <div className='flex flex-wrap mb-10 mt-10 justify-center space-x-7'>
+    <div className='flex flex-wrap mb-10 mt-10 justify-center space-x-10'>
       <div className='dino'>
         <div key={dinosaur.id} className="max-w-md rounded overflow-hidden shadow-lg mb-3 text-center">
           <img className="w-full" src={`../${dinosaur.imageUrl}`} alt={dinosaur.name}/>
@@ -97,6 +99,7 @@ export default function Dinosaur({ dinosaur }) {
               </div>
               <Link href="/continue" >
                 <button 
+                  onClick={() => dispatch(addToCart(dinosaur))}
                   disabled={!value}
                   className="bg-blue hover:bg-white hover:text-blue text-white font-bold py-2 px-4 mb-2 rounded-full">
                   Add to Cart

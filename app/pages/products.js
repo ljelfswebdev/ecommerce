@@ -29,7 +29,7 @@ const Products = () => {
                     {dino.info}
                   </p>
                   <h1 className="text-gray-700 text-base">
-                    {dino.pricePerShare} per Share
+                    £{dino.pricePerShare} per Share
                   </h1>          
                 </div>
                 <Link href={`/product/${dino.name}`} >
