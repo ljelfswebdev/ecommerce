@@ -3,11 +3,46 @@ import styles from '../styles/Home.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { incrementQuantity, decrementQuantity, removeFromCart} from '../redux/cart.slice';
 import Link from 'next/link'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 const CartPage = () => {
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch();
+    const [dinosaurs, setDinosaurs] = useState([]);
+
+    useEffect(() => {
+      saveLocalDinosaurs()
+    },[dinosaurs])
+
+    useEffect(() => {
+      getLocalDinosaurs()
+    },[])
+    
+    const saveLocalDinosaurs = () => {
+      if(dinosaurs.length !== 0){
+      localStorage.setItem("dinosaurs", JSON.stringify(dinosaurs))
+      }
+    }
+
+  const getLocalDinosaurs = () => {
+    if(localStorage.getItem("dinosaurs") === null){
+      localStorage.setItem("dinosaurs", JSON.stringify([]));
+    }else {
+      let dinosaursLocal = JSON.parse(localStorage.getItem("dinosaurs"));
+      setDinosaurs(dinosaursLocal)
+    }
+  }
+
+    // useEffect(() => {
+    //   localStorage.setItem('dinosaurs', JSON.stringify(dinosaurs));
+    // }, [dinosaurs]);
+
+    // useEffect(() => {
+    //   const dinosaurs = JSON.parse(localStorage.getItem('dinosaurs'));
+    //   if (dinosaurs) {
+    //    setDinosaurs(dinosaurs);
+    //   }
+    // }, []);
 
     // const getTotalPrice = () => {
     //   return cart.reduce(
@@ -70,13 +105,17 @@ const CartPage = () => {
         ))}
         <div className="max-w-md rounded overflow-hidden shadow-lg mb-3 py-2 px-4 h-25 text-center">
           <h1 className="font-bold text-xl mb-5">Proceed to checkout</h1>
-
           <div className='grid place-items-center'>
         <Link href="/checkout" >
         <button className="bg-blue hover:bg-white hover:text-blue text-white font-bold py-2 px-4 mb-2 rounded-full">
           Checkout
         </button>
       </Link>
+      <Link href="/products" >
+                <button className="bg-green hover:bg-green2 hover:text-green text-green2 font-bold py-2 px-4 mb-2 rounded-full">
+                Continue Shopping
+                </button>
+              </Link>
       </div>
         </div>
       </div>

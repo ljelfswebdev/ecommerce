@@ -19,21 +19,32 @@ function MobileNav({open, setOpen}) {
                 </Link>     
             </div>
             <div className="flex flex-col ml-4">
-                <a className="text-xl font-medium my-4" href="/products" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                <Link href="/products">
+                    <a className="text-xl font-medium my-4"  onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Products
-                </a>
-                <a className="text-xl font-normal my-4" href="/about" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                    </a>
+                </Link>
+                <Link href="/about">
+                   <a className="text-xl font-normal my-4"  onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     About
-                </a>
-                <a className="text-xl font-normal my-4" href="/contact" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                    </a> 
+                </Link>
+                <Link href="/contact">
+                    <a className="text-xl font-normal my-4"  onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Contact
-                </a>
-                <a className="text-xl font-normal my-4" href="/sales" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                    </a>  
+                </Link>
+                <Link href="/sales">
+                    <a className="text-xl font-normal my-4"  onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Sales
-                </a>
-                <a className="text-xl font-normal my-4" href="/cart" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                    </a>
+                </Link>
+                <Link href="/cart">
+                    <a className="text-xl font-normal my-4"  onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Cart
-                </a>
+                    </a>
+                </Link>
+                
             </div>  
         </div>
     )

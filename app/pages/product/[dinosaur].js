@@ -1,10 +1,10 @@
 import dinosaurs from '../api/data/dinosaurs.json'
 import Link from 'next/link'
-import { useState } from 'react'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cart.slice';
+import { useState, useEffect } from "react";
 
 export async function getStaticPaths() {
     const paths = dinosaurs.map(dinosaur => ({
@@ -22,6 +22,8 @@ export async function getStaticProps({ params }) {
 export default function Dinosaur({ dinosaur }) {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
+
+
 
   return (
 
